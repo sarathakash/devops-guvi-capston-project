@@ -22,6 +22,13 @@ pipeline {
 post{
       always{
             sh 'docker run -d -p 80:80 sarathakashk95/prod:latest'
+            catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
+            mail  to: "sarathakashk7@gmail.com",
+                  subject: "Notification mail from Jenkins",
+                  body: "CI/CD pipeline completed successfully.\n\nCheck the application"
+                
+                
+        }
 }
 
 }
