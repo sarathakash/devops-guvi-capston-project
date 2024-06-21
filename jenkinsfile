@@ -21,7 +21,7 @@ pipeline {
 
 post{
       always{
-            sh 'docker run -d -p 3000:80 sarathakashk95/prod:latest'
+            sh 'docker run -d -p 80:80 sarathakashk95/prod:latest'
 }
 
 }
