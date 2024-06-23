@@ -1,3 +1,4 @@
 #!/bin/bash
-sudo docker build -t ngimg .
-sudo docker tag ngimg sarathakashk95/prod:version-1
+docker build -t ngimg .
+docker tag ngimg sarathakashk95/prod:version-1
+
